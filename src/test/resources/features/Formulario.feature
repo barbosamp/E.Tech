@@ -5,11 +5,11 @@
 
   Funcionalidade: Formulário
 
-    @mobile
+    @mobile @login
     Cenario: Validar inserção do nome no formulário
       Dado que esteja na aplicação
       E toco no botão "Formulário"
       E preencho o campo nome
-      Quando toco em salvar
+      Quando toco no botão "SALVAR"
       Entao visualizo as informações na tela
 

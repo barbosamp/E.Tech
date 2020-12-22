@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         "br.com.treinamento.etech.steps",
         "br.com.treinamento.etech.configuration",
         "br.com.treinamento.etech.commons"},
-        tags = {"@mobile"})
+        tags = {"@formulario"})
 
 public class RunTest {
 }

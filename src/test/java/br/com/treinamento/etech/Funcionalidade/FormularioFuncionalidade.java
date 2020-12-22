@@ -4,10 +4,7 @@ import br.com.treinamento.etech.Pages.FormularioPage;
 import br.com.treinamento.etech.commons.AppiumRobot;
 import br.com.treinamento.etech.commons.BaseTest;
 import com.github.javafaker.Faker;
-import gherkin.lexer.Fa;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.util.Random;
 
 public class FormularioFuncionalidade extends BaseTest {
 
@@ -31,4 +28,25 @@ public class FormularioFuncionalidade extends BaseTest {
     public boolean validaExistenciaLabelNome(){
         return this.appiumRobot.validaExistenciaTexto("Nome: "+ nome);
     }
+
+    public boolean validaExistenciaLabelConsole() {
+        return this.appiumRobot.validaExistenciaTexto("Console: xone");
+    }
+
+    public boolean validaExistenciaCheckboxMarcado() {
+        return this.appiumRobot.validaExistenciaTexto("Checkbox: Marcado");
+    }
+
+    public void selecionarLista() {
+        this.formularioPage.getLista().click();
+        driverWait.until(ExpectedConditions.visibilityOf(this.formularioPage.getOpcaoListaXBox()));
+        this.formularioPage.getOpcaoListaXBox().click();
+
+    }
+
+    public void selecionarCheckBox(){
+        this.formularioPage.getCheckbox().click();
+    }
+
+
 }

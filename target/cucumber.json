@@ -1,0 +1,76 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language: pt"
+      },
+      {
+        "line": 2,
+        "value": "#enconding: UTF-8"
+      },
+      {
+        "line": 3,
+        "value": "#Author: Guilherme Teixeira"
+      }
+    ],
+    "line": 6,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11801958500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenarioWeb()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "teste haaha",
+        "description": "",
+        "id": "teste;teste-haaha",
+        "after": [
+          {
+            "result": {
+              "duration": 1435318800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenarioWeb(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 167977600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que acesso a tela de formulário",
+            "match": {
+              "location": "TesteFormulario.queAcessoATelaDeFormulário()"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      }
+    ],
+    "name": "teste",
+    "description": "",
+    "id": "teste",
+    "keyword": "Funcionalidade",
+    "uri": "features/teste.feature",
+    "tags": [
+      {
+        "line": 5,
+        "name": "@mobile"
+      }
+    ]
+  }
+]

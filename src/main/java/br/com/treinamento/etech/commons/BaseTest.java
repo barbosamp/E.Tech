@@ -5,13 +5,15 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BaseTest {
 
-    private static AppiumDriver<MobileElement> driver;
-
+    protected static AppiumDriver<MobileElement> driver;
+    protected static WebDriverWait driverWait;
     public static AppiumDriver<MobileElement> createDriver() {
 
         try {
@@ -27,8 +29,9 @@ public class BaseTest {
             //explicar a diferença
             //Arquivo que deseja iniciar
             //cap.setCapability(MobileCapabilityType.APP, new File("nome.apk"));
-            driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-
+            cap.setCapability("autoGrantPermissions","true" );
+            driver = new AppiumDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+            driverWait = new WebDriverWait(driver,60);
         } catch (MalformedURLException e) {
             System.out.println(e.getMessage());
 

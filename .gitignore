@@ -1,0 +1,5 @@
+*.log
+*.png
+*.html
+allure-results/
+.idea/

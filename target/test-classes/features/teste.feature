@@ -2,11 +2,14 @@
 #enconding: UTF-8
 #Author: Guilherme Teixeira
 
-  @mobile
-  Funcionalidade: teste
 
+  Funcionalidade: Formulário
 
-    Cenario: teste haaha
-      #noinspection CucumberUndefinedStep
-      Dado que eu selecionar a opção "About"
+    @mobile
+    Cenario: Validar inserção do nome no formulário
+      Dado que esteja na aplicação
+      E toco no botão "Formulário"
+      E preencho o campo nome
+      Quando toco em salvar
+      Entao visualizo as informações na tela
 

@@ -11,12 +11,12 @@ import java.io.IOException;
 public class Hooks {
 
     @Before(value = "@mobile")
-    public void beforeScenarioWeb(){
+    public void beforeScenarioMobile(){
         BaseTest.getDriver();
     }
 
     @After(value = "@mobile")
-    public void afterScenarioWeb(Scenario scenario) throws IOException {
+    public void afterScenarioMobile(Scenario scenario) throws IOException {
         File screenshot = Utils.gerarScreenShot(scenario);
         Utils.embedScreenshot(screenshot, scenario.getName());
         BaseTest.closeDriver();

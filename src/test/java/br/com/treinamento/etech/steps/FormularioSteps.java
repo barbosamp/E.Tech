@@ -18,6 +18,11 @@ public class FormularioSteps {
         this.formularioFuncionalidade.preencheCampoNome();
     }
 
+    @E("^preencho o campo sobrenome$")
+    public void preenchoOCampoNome() {
+        this.formularioFuncionalidade.preencheCampoSobrenome();
+    }
+
     @Entao("^visualizo as informações na tela$")
     public void visualizoAsInformaçõesNaTela() {
         Assert.assertTrue(this.formularioFuncionalidade.validaExistenciaLabelNome());

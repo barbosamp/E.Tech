@@ -10,6 +10,7 @@
       Dado que esteja na aplicação
       E toco no botão "Formulário"
       E preencho o campo nome
+      E preencho o campo sobrenome
       Quando toco no botão "SALVAR"
       Entao visualizo as informações na tela
 

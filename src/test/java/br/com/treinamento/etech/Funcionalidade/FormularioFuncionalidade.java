@@ -11,6 +11,7 @@ public class FormularioFuncionalidade extends BaseTest {
     private FormularioPage formularioPage;
     private AppiumRobot appiumRobot;
     private String nome;
+    private String sobreNome;
     private Faker faker;
 
     public FormularioFuncionalidade(){
@@ -23,6 +24,12 @@ public class FormularioFuncionalidade extends BaseTest {
         driverWait.until(ExpectedConditions.visibilityOf(this.formularioPage.getNome_txt()));
         nome = faker.name().fullName();
         this.formularioPage.getNome_txt().sendKeys(nome);
+    }
+
+    public void preencheCampoSobrenome(){
+        driverWait.until(ExpectedConditions.visibilityOf(this.formularioPage.getNome_txt()));
+        sobreNome = faker.name().fullName();
+        this.formularioPage.getNome_txt().sendKeys(sobreNome);
     }
 
     public boolean validaExistenciaLabelNome(){
